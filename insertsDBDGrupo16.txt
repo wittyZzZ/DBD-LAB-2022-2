@@ -1,0 +1,419 @@
+
+
+insert into Region (id_region, nombre_region) values (1, 'Metropolitana');
+
+insert into Region (id_region, nombre_region) values (2, 'O’higgins');
+
+insert into Region (id_region, nombre_region) values (3, 'Atacama');
+
+insert into Region (id_region, nombre_region) values (4, 'Coquimbo');
+
+insert into Region (id_region, nombre_region) values (5, 'Valparaíso');
+
+insert into Region (id_region, nombre_region) values (6, 'Tarapacá');
+
+insert into Region (id_region, nombre_region) values (7, 'Antofagasta');
+
+insert into Region (id_region, nombre_region) values (8, 'Magallanes');
+
+insert into Region (id_region, nombre_region) values (9, 'La Araucanía');
+
+insert into Region (id_region, nombre_region) values (10, 'Maule');
+
+
+
+
+insert into Permiso (id_permiso, nombre_permiso) values (22 , 'Publicar producto');
+insert into Permiso (id_permiso, nombre_permiso) values (34 , 'Gestionar datos Productos');
+insert into Permiso (id_permiso, nombre_permiso) values (45 , 'Gestionar datos Usuario');
+insert into Permiso (id_permiso, nombre_permiso) values (55 , 'Solicitar direccion de entrega');
+insert into Permiso (id_permiso, nombre_permiso) values (27 , 'Pagar producto');
+insert into Permiso (id_permiso, nombre_permiso) values (18 , 'Añadir puntuación');
+insert into Permiso (id_permiso, nombre_permiso) values (19 , 'Agregar al carro');
+
+
+
+
+
+
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('555', 'Av. Víctor Jara 3659', '2022-02-28');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('888', 'Nocedal 662', '2022-01-01');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('4731', 'Lira 6768', '2022-04-30');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('767', 'Av. Portugal 1647', '2022-06-15');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('123', 'Paganini 758', '2022-05-26');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('972', 'Darwin 9876', '2022-05-09');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('444', 'Av. San Antonio 128', '2022-06-02');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('756', 'El Olivo 0134', '2022-03-07');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('255', 'Viena 425', '2022-01-14');
+
+insert into Pedido(id_pedido, direccion_entrega, fecha_entrega) values ('1141', 'El Espino 1045', '2022-01-28');
+
+
+
+
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (1435, 'Zapatillas Mike', 'Vestimentas', '50000', '10', '4');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (896, 'Moca Cola 3L', 'Bebestibles', '2500', '150', '7');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (788, 'Toritos', 'Comestibles', '600', '200', '8');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (1678, 'Santa 1.5L', 'Bebestibles', '1400', '60', '6');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (1271, 'Televisión MG 47"', 'Tecnología', '200000', '5', '7');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (282, 'Celular Uphone 25', 'Tecnología', '700000', '3', '6');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (798, 'Carne Vacuno 1kg', 'Carnes', '15000', '18', '8');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (437, 'Sandía 1un', 'Frutas', '5000', '30', '10');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (76, 'Tomate 1kg', 'Frutas', '2000', '50', '8');
+
+insert into Producto(id_producto, nombre_producto, tipo_producto, precio_producto, stock_producto, ranking_producto) values (24, 'Teclado Vyzen', 'Tecnología', '40000', '25', '5');
+
+
+
+
+
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (881, '21959323-2', 'Noelani Creamen', 'ncreamen0@uiuc.edu', 951943859);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (376, '22198780-3', 'Rochester Jekel', 'rjekel1@networkadvertising.org', 981780359);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (872, '12772663-7', 'Torry Doreward', 'tdoreward2@msn.com', 924566947);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (843, '22460220-k', 'Abigail Lenham', 'alenham3@theguardian.com', 918691776);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (134, '20886527-7', 'William Zubarzo', 'wlanfare4@facebook.com', 943010880);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (124, '22541861-1', 'Leanor Duffield', 'lduffield5@npr.org', 946961978);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (12456, '21721085-0', 'Donnell Beals', 'dbeals6@cisco.com', 920423999);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (126, '21725663-2', 'Joice Mattei', 'jmattei7@hhs.gov', 941108748);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (998, '21995041-4', 'Forrest Yakovliv', 'fyakovliv8@guardian.co.uk', 979519585);
+
+insert into Administrador_Empresa (id_admin_empresa, RUT_admin_empresa, nombre_admin_empresa, correo_admin_empresa, telefono_admin_empresa) values (174, '22285641-5', 'Riki Rosthorn', 'rrosthorn9@paginegialle.it', 935608007);
+
+
+
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (666, 'Yumii', 'Alimentos', 'cbriggdale0@gmail.com', 998652949, 9, 14, 124);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (2178, 'Babblestorm', 'Juguetería', 'amingame1@hotmail.com', 944557218, 10, 12, 174);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (6586, 'Zoomcast', 'Limpieza', 'pkelloway2@google.ca', 923034506, 8, 18, 872);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (21415, 'Zonoodle', 'Videojuegos', 'plancashire3@privacy.gov.au', 978615937, 4, 16, 843);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (7686, 'Kwiku', 'Joyería', 'chardinge4@behance.net', 980692060, 6, 18, 998);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (2135, 'Edgepulse', 'Alimentos', 'bspyer5@gmail.com', 959240001, 3, 14, 126);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (21424, 'Yodel', 'Tecnología', 'owhittall6@gmail.com', 928377720, 3, 14, 881);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (2134, 'Topicblab', 'Juguetería', 'bmcmearty7@apache.org', 988051034, 3, 12, 12456);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (214, 'Kwinu', 'Ropa', 'ikempton8@house.gov', 971239854, 4, 12, 134);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (6765, 'Eire', 'Tecnología', 'rmolnar9@eventbrite.com', 969205789, 9, 18, 376);
+
+insert into Empresa (id_empresa, nombre_empresa, tipo_tienda, correo_empresa, telefono_empresa, ranking_empresa, restriccion_etaria, id_admin_empresa) values (0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (234, '21629327-3', 'Karisa Morffew', 'kmorffew0@myspace.com', '986473332', 20, '2022/12/22', '1r7jJ8uz2D5D', 666, 1);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (845, '23240119-0', 'Mercedes Nibley', 'mnibley1@pen.io', '997464131', 99, '2022/09/29', 'JjqbLEImILo', 6765, 1);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1231, '22411088-4', 'Artemus Freiburger', 'afreiburger2@nasa.gov', '905266023', 46, '2022/04/07', 'ysbWMzC6nwc', 214, 3);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (554, '20326696-7', 'Corry Beall', 'cbeall3@wiley.com', '908580397', 38, '2022/05/16', 'EWVMUFCoa', 21424, 6);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (7676, '17840713-4', 'Torey Durnall', 'tdurnall4@twitpic.com', '953121592', 72, '2022/09/02', 'ZdPt2jk', 2135, 4);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (2141, '26043158-6', 'Baxy Matessian', 'bmatessian5@wsj.com', '971260167', 63, '2022/03/31', 'HFvNChQi8awK', 2178, 6);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (217, '26810127-2', 'Emery Lambirth', 'elambirth6@statcounter.com', '939422526', 94, '2022/05/26', 'fjP22ARdRs4e', 7686, 2);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (956, '22802628-7', 'Noelle Schusterl', 'nschusterl7@123-reg.co.uk', '905938420', 60, '2022/05/23', 'P6IwXl', 2134, 10);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (3244, '26933680-6', 'Suzette Ekell', 'sekell8@shutterfly.com', '945499639', 88, '2022/11/30', '3sbsE4GwDN', 21415, 9);
+
+insert into Usuario (id_usuario, rut_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (556, '20001498-4', 'Guillaume Emps', 'gemps9@webmd.com', '964650161', 24, '2022/06/28', 'uHLLiIKt', 6586, 8);
+
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1225, '22539290-k', 'Huntley Gurry', 'hgurry1@joomla.org', 994741725, 36, '2022-10-20', 'h1qqsdhzvw', 0, 8);
+
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (744, '21215375-2', 'Alastair Castanho', 'acastanho0@fema.gov', 995749158, 44, '2022-08-23', 'kLc5xuMJ', 0, 9);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1293, '24456464-4', 'Brynna Wornum', 'bwornum1@lycos.com', 977178182, 71, '2021-01-15', 'eHS0X03gn', 0, 5);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1301, '17452963-6', 'Gabriel Dooler', 'gdooler2@1und1.de', 949881270, 56, '2021-06-12', 'YCThZghRlT3y', 0, 9);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1447, '24578418-8', 'Neilla Muccino', 'nmuccino3@ifeng.com', 928957542, 64, '2021-03-23', 'nynLtx', 0, 4);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1033, '17633292-2', 'Ellynn Bosworth', 'ebosworth4@mapquest.com', 955412065, 68, '2022-11-14', 'HcFnEO9Thxj', 0, 3);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (530, '24106834-0', 'Adan Bowler', 'abowler5@spotify.com', 903450198, 81, '2021-02-18', 'ie3WhRl', 0, 9);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (500, '22396077-2', 'Welch Kearford', 'wkearford6@oracle.com', 979270726, 47, '2021-02-09', 'Lvy6OWL9N', 0, 4);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1016, '21561413-1', 'Casandra Bedo', 'cbedo7@phoca.cz', 936840058, 22, '2020-12-25', 'gNNowD2I', 0, 10);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1460, '22660130-9', 'Lazarus Jowle', 'ljowle8@washingtonpost.com', 918262731, 53, '2021-05-16', 'sfiqh6vm4D7', 0, 2);
+
+insert into Usuario (id_usuario, RUT_usuario, nombre_usuario, correo_usuario, telefono_usuario, edad_usuario, fecha_registro, contraseña_cuenta, id_empresa, id_region) values (1342, '23206995-7', 'Enos Bourhill', 'ebourhill9@japanpost.jp', 945322471, 44, '2021-03-08', 'NdPrmyuLdi', 0, 7);
+
+
+
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (554, 24, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (234, 76, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (845, 896, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (556, 1435, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (217, 788, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (7676, 1678, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (3244, 1271, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (956, 282, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (2141, 798, 0);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1231, 437, 0);
+
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1342, 24, 5);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1342, 788, 6);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1460, 76, 6);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1460, 896, 8);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1460, 437, 6);
+
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1016, 437, 3);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (500, 798, 7);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (500, 1271, 6);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (500, 24, 9);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (500, 1678, 2);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (530, 282, 5);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (530, 896, 4);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1033, 1271, 10);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1033, 282, 8);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1447, 1678, 5);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1447, 1435, 8);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1447, 1271, 3);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1301, 788, 5);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1301, 24, 1);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1301, 76, 8);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1301, 798, 4);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (1293, 896, 7);
+
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (744, 1435, 9);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (744, 282, 10);
+insert into Usuario_producto (id_usuario, id_producto, puntaje_producto) values (744, 437, 6);
+
+
+
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (874, 'Rengo', 865037, 1);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (1545, 'Quilicura', 997914, 2);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (544, 'La Estrella', 835133, 3);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (7842, 'Cerro Navia', 972866, 4);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (766, 'La Ligua', 966053, 5);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (245, 'Concón', 821197, 6);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (664, 'Quintero', 940356, 7);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (325, 'San Ignacio', 823445, 8);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (225, 'Viña del Mar', 993074, 9);
+
+insert into Comuna (id_comuna, nombre_comuna, codigo_postal, id_region) values (782, 'Chañaral', 853616, 10);
+
+
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('655', 'Paypal', '3', '755000', '555');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('255', 'Efectivo', '1', '2500', '1141');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('356', 'Efectivo', '4', '57600', '4731');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('789', 'Débito', '3', '251400', '123');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('889', 'Crédito', '2', '702500', '444');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('557', 'Crédito', '1', '5000', '756');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('67', 'Paypal', '2', '40600', '255');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('431', 'Crédito', '2', '900000', '767');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('1212', 'MercadoPago', '3', '9500', '888');
+
+insert into Carro_de_compra(id_carro, medio_de_pago, cantidad_productos, precio_total, id_pedido) values ('242', 'Efectivo', '4', '256400', '972');
+
+
+insert into Usuario_carro_compra (id_carro, id_usuario) values (67, 1342);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (1212, 1460);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (557, 1016);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (242, 500);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (889, 530);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (431, 1033);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (789, 1447);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (356, 1301);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (255, 1293);
+insert into Usuario_carro_compra (id_carro, id_usuario) values (655, 744);
+
+
+
+insert into Producto_carro_compra (id_producto, id_carro) values (24,67);
+insert into Producto_carro_compra (id_producto, id_carro) values (788,67);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (76,1212);
+insert into Producto_carro_compra (id_producto, id_carro) values (896,1212);
+insert into Producto_carro_compra (id_producto, id_carro) values (437,1212);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (437,557);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (798,242);
+insert into Producto_carro_compra (id_producto, id_carro) values (1271,242);
+insert into Producto_carro_compra (id_producto, id_carro) values (24,242);
+insert into Producto_carro_compra (id_producto, id_carro) values (1678,242);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (282,889);
+insert into Producto_carro_compra (id_producto, id_carro) values (896,889);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (1271, 431);
+insert into Producto_carro_compra (id_producto, id_carro) values (282, 431);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (1678,789);
+insert into Producto_carro_compra (id_producto, id_carro) values (1435,789);
+insert into Producto_carro_compra (id_producto, id_carro) values (1271,789);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (788,356);
+insert into Producto_carro_compra (id_producto, id_carro) values (24,356);
+insert into Producto_carro_compra (id_producto, id_carro) values (76,356);
+insert into Producto_carro_compra (id_producto, id_carro) values (798,356);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (896,255);
+
+insert into Producto_carro_compra (id_producto, id_carro) values (1435,655);
+insert into Producto_carro_compra (id_producto, id_carro) values (282,655);
+insert into Producto_carro_compra (id_producto, id_carro) values (437,655);
+
+
+insert into Rol (id_rol, nombre_rol) values (1,'Administrador');
+insert into Rol (id_rol, nombre_rol) values (2,'Empresa');
+insert into Rol (id_rol, nombre_rol) values (3,'Cliente');
+
+
+
+insert into Rol_usuario (id_rol, id_usuario) values (1, 1225);
+
+insert into Rol_usuario (id_rol, id_usuario) values (2, 556);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 3244);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 956);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 217);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 2141);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 7676);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 554);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 1231);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 234);
+insert into Rol_usuario (id_rol, id_usuario) values (2, 845);
+
+
+insert into Rol_usuario (id_rol, id_usuario) values (3, 1342);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 1460);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 1016);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 500);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 530);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 1033);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 1447);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 1301);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 744);
+insert into Rol_usuario (id_rol, id_usuario) values (3, 1293);
+
+
+insert into Rol_permiso (id_rol, id_permiso) values (1,34);
+insert into Rol_permiso (id_rol, id_permiso) values (1,45);
+insert into Rol_permiso (id_rol, id_permiso) values (2,22);
+insert into Rol_permiso (id_rol, id_permiso) values (3,27);
+insert into Rol_permiso (id_rol, id_permiso) values (3,18);
+insert into Rol_permiso (id_rol, id_permiso) values (3,19);
+
+
+
+
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (1,'Av. Costanera',45,874);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (2,'Sol',344,782);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (3,'Los Andes',32,245);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (4,'Pje. Las Rosas',94,7842);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (5,'Costa',40,544);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (6,'Alexis Sanchez',931,1545);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (7,'Arturo Prat',44,766);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (8,'Portales',49,225);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (9,'19 de Octubre',428,664);
+insert into Direccion (id_direccion ,calle ,numero, id_comuna) values (10,'Av. Avellana',244,325);
+
+
+
+
+
+
+
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (666,744,3);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (6765,500,5);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (214,1342,5);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (21424,1460,6);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (2135,1016,10);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (2178,530,5);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (7686,1033,2);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (2134,1447,5);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (21415,1301,7);
+insert into Usuario_empresa (id_empresa, id_usuario, puntaje_empresa) values (6586,1293,4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
