@@ -1,10 +1,10 @@
-import com.dbdgrupo16.demo.models.Region;
-import com.dbdgrupo16.demo.models.Empresa;
+package com.dbdgrupo16.demo.models;
 
 import javax.persistence.*;
 
 @Entity
 @Table (name = "Usuario")
+
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
