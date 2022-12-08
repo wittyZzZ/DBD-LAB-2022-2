@@ -8,7 +8,9 @@ import javax.persistence.*;
 public class Region {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name ="id_region")
     private Integer id_region;
+    @Column(name ="nombre_region")
     private String nombre_region;
 
     public Region() {
