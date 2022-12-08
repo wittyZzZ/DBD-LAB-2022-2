@@ -35,7 +35,7 @@ public class Usuario_carro_compra {
         return id_usuario_carro_compra;
     }
 
-    public Carro_de_compras getCarro_de_compra() {
+    public Carro_de_compra getCarro_de_compra() {
         return carro_de_compra;
     }
     public Usuario getUsuario(){
@@ -55,7 +55,7 @@ public class Usuario_carro_compra {
     public void setUsuario(Usuario usuario){this.usuario = usuario}
     @Override
     public String toString() {
-        return "Usuario_carro_de_compra [id_usuario_carro_compra=" + id_usuario_carro_compra + ",carro_de_compras=" + carro_de_compra +"usuario="+usuario+ ']';
+        return "Usuario_carro_de_compra [id_usuario_carro_compra=" + id_usuario_carro_compra + ",carro_de_compra=" + carro_de_compra +"usuario="+usuario+ ']';
     }
 
 }
