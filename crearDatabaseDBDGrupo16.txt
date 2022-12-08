@@ -1,12 +1,10 @@
-Create database DBDGrupo16;
-Use DBDGrupo16
 
-create table if not exists Region
+
+Create table if not exists Region
 (
 	id_region int primary key,
 	nombre_region varchar(75)
 );
-
 
 create table if not exists Permiso
 (
@@ -14,14 +12,12 @@ create table if not exists Permiso
 	nombre_permiso varchar(75)
 );
 
-
 create table if not exists Pedido
 (
 	id_pedido int primary key,
 	direccion_entrega varchar(100),
 	fecha_entrega date
 );
-
 
 create table if not exists Producto
 (
@@ -33,7 +29,6 @@ create table if not exists Producto
 	ranking_producto int
 );
 
-
 create table if not exists Administrador_empresa
 (
 	id_admin_empresa int primary key,
@@ -42,7 +37,6 @@ create table if not exists Administrador_empresa
 	correo_admin_empresa varchar(75),
 	telefono_admin_empresa int
 );
-
 
 create table if not exists Empresa
 (
@@ -56,7 +50,6 @@ create table if not exists Empresa
 	ID_admin_empresa int,
 foreign key(ID_admin_empresa) references  Administrador_empresa(ID_admin_empresa)
 );
-
 
 create table if not exists Usuario
 (
@@ -74,16 +67,15 @@ create table if not exists Usuario
 	foreign key (id_region) references Region(id_region)
 );
 
-
 create table if not exists Usuario_producto
 (
-	id_usuario int not null,
+	id_usuario_producto int primary key,
+id_usuario int not null,
 	id_producto int not null, 
 	puntaje_producto int,
 	Foreign key(id_usuario) references Usuario(id_usuario),
 	Foreign key (id_producto) references Producto(id_producto)
 );
-
 
 create table if not exists Comuna 
 (
@@ -93,7 +85,6 @@ create table if not exists Comuna
 	id_region int not null,
 	foreign key (ID_region) references Region(ID_region)
 );
-
 
 create table if not exists Carro_de_compra
 (
@@ -105,24 +96,23 @@ id_pedido int,
 	foreign key(id_pedido) references Pedido(id_pedido)
 );
 
-
 create table if not exists Usuario_carro_compra
 (
-	id_carro int not null,
+Id_usuario_carro_compra int primary key,	
+id_carro int not null,
 	id_usuario int not null,
 foreign key(id_carro) references Carro_de_compra(id_carro),
 	foreign key(id_usuario) references Usuario(id_usuario)
 );	
 
-
 create table if not exists Producto_carro_compra
 (
+	id_producto_carro_compra int primary key,
 	id_producto int not null,
 	id_carro int not null,
 	foreign key(ID_producto) references Producto(ID_producto),
 	foreign key(ID_carro) references Carro_de_compra(ID_carro)
 );
-
 
 create table if not exists Rol
 (
@@ -133,21 +123,23 @@ create table if not exists Rol
 
 create table if not exists Rol_usuario
 (
+	id_rol_usuario int primary key,
 	id_rol int not null,
 	id_usuario int not null,
 	foreign key(id_rol) references Rol(id_rol),
 	foreign key(id_usuario) references Usuario(id_usuario)
 );
-		
+	
+	
 
 create table if not exists Rol_permiso
 (
-	id_rol int not null,
+	id_rol_permiso int primary key,
+id_rol int not null,
 	id_permiso int not null,
 	foreign key(ID_rol) references Rol(id_rol),
 	foreign key(ID_permiso) references Permiso(id_permiso)
 );
-
 
 create table if not exists Direccion
 (
@@ -158,9 +150,9 @@ create table if not exists Direccion
 	foreign key(ID_comuna) references Comuna(ID_comuna)
 );
 
-
 create table if not exists Usuario_empresa
 (	
+	id_usuario_empresa int primary key,
 	id_empresa int not null, 
 	id_usuario int not null,
 	puntaje_empresa int,
