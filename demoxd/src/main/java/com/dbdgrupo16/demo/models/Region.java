@@ -17,6 +17,7 @@ public class Region {
 
     }
 
+    // Constructor
     public Region(Integer id_region, String nombre_region) {
         this.id_region = id_region;
         this.nombre_region = nombre_region;
