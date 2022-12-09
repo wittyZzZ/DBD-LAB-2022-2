@@ -24,10 +24,7 @@ public class Usuario_producto {
     }
 
     //Constructor
-
-
     public Usuario_producto(Integer id_usuario_producto, Integer puntaje_producto, Usuario usuario, Producto producto) {
-
         this.id_usuario_producto = id_usuario_producto;
         this.puntaje_producto = puntaje_producto;
         this.usuario = usuario;
@@ -35,41 +32,40 @@ public class Usuario_producto {
     }
 
     //Getters
-
-
     public Integer getId_usuario_producto() {
         return id_usuario_producto;
     }
-
     public Integer getPuntaje_producto() {
         return puntaje_producto;
     }
-
     public Usuario getUsuario() {
         return usuario;
     }
-
     public Producto getProducto() {
         return producto;
     }
 
     //Setters
-
-
     public void setId_usuario_producto(Integer id_usuario_producto) {
         this.id_usuario_producto = id_usuario_producto;
     }
-
     public void setPuntaje_producto(Integer puntaje_producto) {
         this.puntaje_producto = puntaje_producto;
     }
-
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
     public void setProducto(Producto producto) {
         this.producto = producto;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario_producto [id_usuario_producto=" + id_usuario_producto +
+                ", puntaje_producto=" + puntaje_producto +
+                ", usuario=" + usuario +
+                ", producto=" + producto +
+                ']';
     }
 }
 

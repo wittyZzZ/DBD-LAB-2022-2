@@ -67,4 +67,13 @@ public class Comuna {
     public void setRegion(Region region) {
         this.region = region;
     }
+
+    @Override
+    public String toString() {
+        return "Comuna [id_comuna=" + id_comuna +
+                ", nombre_comuna='" + nombre_comuna + '\'' +
+                ", codigo_postal=" + codigo_postal +
+                ", region=" + region +
+                ']';
+    }
 }

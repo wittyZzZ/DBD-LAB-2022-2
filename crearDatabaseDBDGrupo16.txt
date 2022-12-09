@@ -48,7 +48,7 @@ create table if not exists Empresa
 	ranking_empresa int,
 	restriccion_etaria int,
 	ID_admin_empresa int,
-foreign key(ID_admin_empresa) references  Administrador_empresa(ID_admin_empresa)
+	foreign key(ID_admin_empresa) references  Administrador_empresa(ID_admin_empresa)
 );
 
 create table if not exists Usuario
@@ -92,7 +92,7 @@ create table if not exists Carro_de_compra
 	medio_de_pago varchar(50),
 	cantidad_productos int,
 	precio_total int,
-id_pedido int,
+	id_pedido int,
 	foreign key(id_pedido) references Pedido(id_pedido)
 );
 
@@ -135,7 +135,7 @@ create table if not exists Rol_usuario
 create table if not exists Rol_permiso
 (
 	id_rol_permiso int primary key,
-id_rol int not null,
+	id_rol int not null,
 	id_permiso int not null,
 	foreign key(ID_rol) references Rol(id_rol),
 	foreign key(ID_permiso) references Permiso(id_permiso)

@@ -79,4 +79,14 @@ public class Carro_de_compra {
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
+
+    @Override
+    public String toString() {
+        return "Carro_de_compra [id_carro=" + id_carro +
+                ", medio_de_pago='" + medio_de_pago + '\'' +
+                ", cantidad_productos=" + cantidad_productos +
+                ", precio_total=" + precio_total +
+                ", pedido=" + pedido +
+                ']';
+    }
 }

@@ -48,8 +48,8 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido [id_pedido=" + id_pedido + ",nombre_pedido=" + nombre_pedido +",fecha_entrega=" + fecha_entrega + ']';
+        return "Pedido [id_pedido=" + id_pedido + ",nombre_pedido=" +
+                nombre_pedido +",fecha_entrega=" + fecha_entrega + ']';
     }
-
 }
 
