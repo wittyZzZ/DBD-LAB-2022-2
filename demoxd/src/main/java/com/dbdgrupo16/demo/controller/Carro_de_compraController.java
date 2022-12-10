@@ -43,7 +43,7 @@ public class Carro_de_compraController {
 
         Carro_de_compra carro = null;
         try{
-            carro = carro_de_compraService.actualizarCarro_de_compra(carro_de_compra);
+            carro = carro_de_compraService.crearCarro_de_compra(carro_de_compra);
         }catch (Exception ex){
             ex.getMessage();
         }
