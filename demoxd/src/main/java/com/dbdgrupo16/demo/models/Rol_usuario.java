@@ -11,52 +11,50 @@ public class Rol_usuario {
     @Column(name = "id_rol_usuario")
     private Integer id_rol_usuario;
 
-    @ManyToOne
-    @JoinColumn(name = "id_rol")
-    Rol rol;
+    @Column(name = "id_rol")
+    private Integer id_rol;
 
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    Usuario usuario;
+    @Column(name = "id_usuario")
+    private Integer id_usuario;
 
     public Rol_usuario() {
 
     }
 
     // Constructor
-    public Rol_usuario(Integer id_rol_usuario, Rol rol, Usuario usuario) {
+    public Rol_usuario(Integer id_rol_usuario, Integer id_rol, Integer id_usuario) {
         this.id_rol_usuario = id_rol_usuario;
-        this.rol = rol;
-        this.usuario = usuario;
+        this.id_rol = id_rol;
+        this.id_usuario = id_usuario;
     }
 
     // Getters
     public Integer getId_rol_usuario() {
         return id_rol_usuario;
     }
-    public Rol getRol() {
-        return rol;
+    public Integer getId_rol() {
+        return id_rol;
     }
-    public Usuario getUsuario() {
-        return usuario;
+    public Integer getId_usuario() {
+        return id_usuario;
     }
 
     // Setters
     public void setId_rol_usuario(Integer id_rol_usuario) {
         this.id_rol_usuario = id_rol_usuario;
     }
-    public void setRol(Rol rol) {
-        this.rol = rol;
+    public void setId_rol(Integer id_rol) {
+        this.id_rol = id_rol;
     }
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setId_usuario(Integer id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     @Override
     public String toString() {
         return "Rol_usuario [id_rol_usuario=" + id_rol_usuario +
-                ", rol=" + rol +
-                ", usuario=" + usuario +
+                ", id_rol=" + id_rol +
+                ", id_usuario=" + id_usuario +
                 ']';
     }
 }

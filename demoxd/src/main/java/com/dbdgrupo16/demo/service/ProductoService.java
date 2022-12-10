@@ -1,11 +1,18 @@
 package com.dbdgrupo16.demo.service;
 
 import com.dbdgrupo16.demo.models.Producto;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public interface ProductoService {
-    // Create/Update
-    public Producto crearActualizarProducto(Producto producto);
+
+    // Create
+    public Producto crearProducto(Producto producto);
+
+    //Update
+    public Producto actualizarProducto(Producto producto);
 
     // Read
     public List<Producto> getAllProductos();

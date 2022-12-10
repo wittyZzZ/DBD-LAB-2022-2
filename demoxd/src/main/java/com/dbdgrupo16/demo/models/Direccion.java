@@ -16,20 +16,19 @@ public class Direccion {
     @Column(name = "numero")
     private Integer numero;
 
-    @ManyToOne
-    @JoinColumn(name = "id_comuna")
-    Comuna comuna;
+    @Column(name = "id_comuna")
+    private Integer id_comuna;
 
     public Direccion() {
 
     }
 
     // Constructor
-    public Direccion(Integer id_direccion, String calle, Integer numero, Comuna comuna) {
+    public Direccion(Integer id_direccion, String calle, Integer numero, Integer id_comuna) {
         this.id_direccion = id_direccion;
         this.calle = calle;
         this.numero = numero;
-        this.comuna = comuna;
+        this.id_comuna = id_comuna;
     }
 
     // Getters
@@ -42,8 +41,8 @@ public class Direccion {
     public Integer getNumero() {
         return numero;
     }
-    public Comuna getComuna() {
-        return comuna;
+    public Integer getId_comuna() {
+        return id_comuna;
     }
 
     // Setters
@@ -56,8 +55,8 @@ public class Direccion {
     public void setNumero(Integer numero) {
         this.numero = numero;
     }
-    public void setComuna(Comuna comuna) {
-        this.comuna = comuna;
+    public void setId_comuna(Integer id_comuna) {
+        this.id_comuna = id_comuna;
     }
 
     @Override
@@ -65,7 +64,7 @@ public class Direccion {
         return "Direccion [id_direccion=" + id_direccion +
                 ", calle='" + calle + '\'' +
                 ", numero=" + numero +
-                ", comuna=" + comuna +
+                ", id_comuna=" + id_comuna +
                 ']';
     }
 }

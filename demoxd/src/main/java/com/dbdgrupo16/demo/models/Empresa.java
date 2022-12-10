@@ -29,16 +29,15 @@ public class Empresa {
     @Column(name = "restriccion_etaria")
     private Integer restriccion_etaria;
 
-    @ManyToOne
-    @JoinColumn(name = "id_admin_empresa")
-    Administrador_empresa administrador_empresa;
+    @Column(name = "id_admin_empresa")
+    private Integer id_administrador_empresa;
 
     public Empresa() {
 
     }
 
     // Constructor
-    public Empresa(Integer id_empresa, String nombre_empresa, String tipo_tienda, String correo_empresa, Integer telefono_empresa, Integer ranking_empresa, Integer restriccion_etaria, Administrador_empresa administrador_empresa) {
+    public Empresa(Integer id_empresa, String nombre_empresa, String tipo_tienda, String correo_empresa, Integer telefono_empresa, Integer ranking_empresa, Integer restriccion_etaria, Integer id_administrador_empresa) {
         this.id_empresa = id_empresa;
         this.nombre_empresa = nombre_empresa;
         this.tipo_tienda = tipo_tienda;
@@ -46,7 +45,7 @@ public class Empresa {
         this.telefono_empresa = telefono_empresa;
         this.ranking_empresa = ranking_empresa;
         this.restriccion_etaria = restriccion_etaria;
-        this.administrador_empresa = administrador_empresa;
+        this.id_administrador_empresa = id_administrador_empresa;
     }
 
     // Getters
@@ -71,8 +70,8 @@ public class Empresa {
     public Integer getRestriccion_etaria() {
         return restriccion_etaria;
     }
-    public Administrador_empresa getAdministrador_empresa() {
-        return administrador_empresa;
+    public Integer getId_administrador_empresa() {
+        return id_administrador_empresa;
     }
 
     // Setters
@@ -97,8 +96,8 @@ public class Empresa {
     public void setRestriccion_etaria(Integer restriccion_etaria) {
         this.restriccion_etaria = restriccion_etaria;
     }
-    public void setAdministrador_empresa(Administrador_empresa administrador_empresa) {
-        this.administrador_empresa = administrador_empresa;
+    public void setId_administrador_empresa(Integer id_administrador_empresa) {
+        this.id_administrador_empresa = id_administrador_empresa;
     }
 
     @Override
@@ -110,7 +109,7 @@ public class Empresa {
                 ", telefono_empresa=" + telefono_empresa +
                 ", ranking_empresa=" + ranking_empresa +
                 ", restriccion_etaria=" + restriccion_etaria +
-                ", administrador_empresa=" + administrador_empresa +
+                ", id_administrador_empresa=" + id_administrador_empresa +
                 ']';
     }
 }

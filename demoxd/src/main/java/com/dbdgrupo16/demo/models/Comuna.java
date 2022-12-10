@@ -14,9 +14,8 @@ public class Comuna {
     private String nombre_comuna;
     @Column(name = "codigo_postal")
     private Integer codigo_postal;
-    @ManyToOne
-    @JoinColumn(name = "id_region")
-    Region region;
+    @Column(name = "id_region")
+    private Integer id_region;
 
     public Comuna() {
 
@@ -24,12 +23,12 @@ public class Comuna {
 
     //Constructor
 
-    public Comuna(Integer id_comuna, String nombre_comuna, Integer codigo_postal, Region region) {
+    public Comuna(Integer id_comuna, String nombre_comuna, Integer codigo_postal, Integer id_region) {
 
         this.id_comuna = id_comuna;
         this.nombre_comuna = nombre_comuna;
         this.codigo_postal = codigo_postal;
-        this.region = region;
+        this.id_region = id_region;
     }
 
     //Getters
@@ -46,8 +45,8 @@ public class Comuna {
         return codigo_postal;
     }
 
-    public Region getRegion() {
-        return region;
+    public Integer getId_Region() {
+        return id_region;
     }
 
     //Setters
@@ -64,8 +63,8 @@ public class Comuna {
         this.codigo_postal = codigo_postal;
     }
 
-    public void setRegion(Region region) {
-        this.region = region;
+    public void setId_Region(Integer id_region) {
+        this.id_region = id_region;
     }
 
     @Override
@@ -73,7 +72,7 @@ public class Comuna {
         return "Comuna [id_comuna=" + id_comuna +
                 ", nombre_comuna='" + nombre_comuna + '\'' +
                 ", codigo_postal=" + codigo_postal +
-                ", region=" + region +
+                ", id_region=" + id_region +
                 ']';
     }
 }

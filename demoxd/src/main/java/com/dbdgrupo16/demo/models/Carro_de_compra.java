@@ -17,9 +17,8 @@ public class Carro_de_compra {
     private Integer cantidad_productos;
     @Column(name = "precio_total")
     private Integer precio_total;
-    @ManyToOne
-    @JoinColumn(name = "id_pedido")
-    Pedido pedido;
+    @Column(name = "id_pedido")
+    private Integer id_pedido;
 
     public Carro_de_compra() {
 
@@ -27,13 +26,13 @@ public class Carro_de_compra {
 
     //Constructor
 
-    public Carro_de_compra(Integer id_carro, String medio_de_pago, Integer cantidad_productos, Integer precio_total, Pedido pedido) {
+    public Carro_de_compra(Integer id_carro, String medio_de_pago, Integer cantidad_productos, Integer precio_total, Integer id_pedido) {
 
         this.id_carro = id_carro;
         this.medio_de_pago = medio_de_pago;
         this.cantidad_productos = cantidad_productos;
         this.precio_total = precio_total;
-        this.pedido = pedido;
+        this.id_pedido = id_pedido;
     }
 
     //Getters
@@ -54,8 +53,8 @@ public class Carro_de_compra {
         return precio_total;
     }
 
-    public Pedido getPedido() {
-        return pedido;
+    public Integer getId_pedido() {
+        return id_pedido;
     }
 
     //Setters
@@ -76,8 +75,8 @@ public class Carro_de_compra {
         this.precio_total = precio_total;
     }
 
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
+    public void setPedido(Integer id_pedido) {
+        this.id_pedido = id_pedido;
     }
 
     @Override
@@ -86,7 +85,7 @@ public class Carro_de_compra {
                 ", medio_de_pago='" + medio_de_pago + '\'' +
                 ", cantidad_productos=" + cantidad_productos +
                 ", precio_total=" + precio_total +
-                ", pedido=" + pedido +
+                ", id_pedido=" + id_pedido +
                 ']';
     }
 }

@@ -15,7 +15,12 @@ public class ProductoServicempl implements ProductoService {
     private ProductoRepository productoRepository;
 
     @Override
-    public Producto crearActualizarProducto(Producto producto) {
+    public Producto crearProducto(Producto producto) {
+        return productoRepository.save(producto);
+    }
+
+    @Override
+    public Producto actualizarProducto(Producto producto) {
         return productoRepository.save(producto);
     }
 

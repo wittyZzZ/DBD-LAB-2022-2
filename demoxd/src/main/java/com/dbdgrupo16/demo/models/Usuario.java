@@ -34,7 +34,7 @@ public class Usuario {
     }
 
     //Constructor
-    public Usuario(Integer id_usuario, String rut_usuario, String nombre_usuario, String correo_usuario, Integer telefono_usuario, Integer edad_usuario, String fecha_registro, String contraseña_cuenta, Empresa empresa, Region region) {
+    public Usuario(Integer id_usuario, String rut_usuario, String nombre_usuario, String correo_usuario, Integer telefono_usuario, Integer edad_usuario, String fecha_registro, String contraseña_cuenta, Integer id_empresa, Integer id_region) {
 
         this.id_usuario = id_usuario;
         this.rut_usuario = rut_usuario;

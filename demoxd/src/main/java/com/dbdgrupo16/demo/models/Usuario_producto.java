@@ -12,23 +12,23 @@ public class Usuario_producto {
     private Integer id_usuario_producto;
     @Column(name = "puntaje_producto")
     private Integer puntaje_producto;
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    Usuario usuario;
-    @ManyToOne
-    @JoinColumn(name = "id_producto")
-    Producto producto;
+
+    @Column(name = "id_usuario")
+    private Integer id_usuario;
+
+    @Column(name = "id_producto")
+    private Integer id_producto;
 
     public Usuario_producto() {
 
     }
 
     //Constructor
-    public Usuario_producto(Integer id_usuario_producto, Integer puntaje_producto, Usuario usuario, Producto producto) {
+    public Usuario_producto(Integer id_usuario_producto, Integer puntaje_producto, Integer id_usuario, Integer id_producto) {
         this.id_usuario_producto = id_usuario_producto;
         this.puntaje_producto = puntaje_producto;
-        this.usuario = usuario;
-        this.producto = producto;
+        this.id_usuario = id_usuario;
+        this.id_producto = id_producto;
     }
 
     //Getters
@@ -38,11 +38,11 @@ public class Usuario_producto {
     public Integer getPuntaje_producto() {
         return puntaje_producto;
     }
-    public Usuario getUsuario() {
-        return usuario;
+    public Integer getId_usuario() {
+        return id_usuario;
     }
-    public Producto getProducto() {
-        return producto;
+    public Integer getId_producto() {
+        return id_producto;
     }
 
     //Setters
@@ -52,19 +52,19 @@ public class Usuario_producto {
     public void setPuntaje_producto(Integer puntaje_producto) {
         this.puntaje_producto = puntaje_producto;
     }
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setUsuario(Integer id_usuario) {
+        this.id_usuario = id_usuario;
     }
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    public void setProducto(Integer id_producto) {
+        this.id_producto = id_producto;
     }
 
     @Override
     public String toString() {
         return "Usuario_producto [id_usuario_producto=" + id_usuario_producto +
                 ", puntaje_producto=" + puntaje_producto +
-                ", usuario=" + usuario +
-                ", producto=" + producto +
+                ", id_usuario=" + id_usuario +
+                ", id_producto=" + id_producto +
                 ']';
     }
 }
