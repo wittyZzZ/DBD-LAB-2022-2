@@ -1,6 +1,7 @@
 package com.dbdgrupo16.demo.controller;
 
 import com.dbdgrupo16.demo.models.Pedido;
+import com.dbdgrupo16.demo.models.Region;
 import com.dbdgrupo16.demo.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,45 +15,59 @@ public class PedidoController {
 
     @Autowired
     private PedidoService pedidoService;
-    @GetMapping("/allPedido")
+
+    @GetMapping
     public ResponseEntity<List<Pedido>> getAllPedidos() {
-        List<Pedido> pedidos = null;
+        List<Pedido> pedi = null;
         try {
-            pedidos = pedidoService.getAllPedidos();
+            pedi = pedidoService.getAllPedidos();
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<List<Pedido>>(pedidos,HttpStatus.OK);
+        return new ResponseEntity<List<Pedido>>(pedi,HttpStatus.OK);
     }
 
-    @GetMapping("/getById/{id_pedido}")
+    @GetMapping("{id_pedido}")
     public ResponseEntity<Pedido> getPedidoById(@PathVariable("id_pedido") Integer id_pedido) {
-        Pedido pedidos = null;
+        Pedido pedi = null;
         try {
-            pedidos = pedidoService.getPedidoById(id_pedido);
+            pedi = pedidoService.getPedidoById(id_pedido);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Pedido>(pedidos,HttpStatus.OK);
+        return new ResponseEntity<Pedido>(pedi,HttpStatus.OK);
     }
-    @PostMapping("/crearoActualizar")
-    public ResponseEntity<Pedido> crearActualizarPedido(@RequestBody Pedido pedido){
-        Pedido pedidos = null;
+
+    @PostMapping
+    public ResponseEntity<Pedido> crearPedido(@RequestBody Pedido pedido){
+        Pedido pedi = null;
         try {
-            pedidos = pedidoService.crearActualizarPedido(pedido);
+            pedi = pedidoService.crearPedido(pedido);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Pedido>(pedidos,HttpStatus.OK);
+        return new ResponseEntity<Pedido>(pedi,HttpStatus.OK);
     }
-    @DeleteMapping("/eliminar/{id_pedido}")
+
+    @PutMapping
+    public ResponseEntity<Pedido> actualizarPedido(@RequestBody Pedido pedido){
+        Pedido pedi = null;
+        try {
+            pedi = pedidoService.actualizarPedido(pedido);
+        } catch(Exception ex) {
+            ex.getMessage();
+        }
+        return new ResponseEntity<Pedido>(pedi,HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id_pedido}")
     public ResponseEntity<Pedido> eliminarPedido(@PathVariable("id_pedido") Integer id_pedido){
-        Pedido pedidos = null;
+        Pedido pedi= null;
         try {
-            pedidos = pedidoService.eliminarPedido(id_pedido);
+            pedi = pedidoService.eliminarPedido(id_pedido);
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Pedido>(pedidos,HttpStatus.OK);
+        return new ResponseEntity<Pedido>(pedi,HttpStatus.OK);
     }
 }

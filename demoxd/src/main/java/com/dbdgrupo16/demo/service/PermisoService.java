@@ -1,12 +1,18 @@
 package com.dbdgrupo16.demo.service;
 
 import com.dbdgrupo16.demo.models.Permiso;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public interface PermisoService {
 
-    // Create/Update
-    public Permiso crearActualizarPermiso(Permiso permiso);
+    // Create
+    public Permiso crearPermiso(Permiso permiso);
+
+    // Update
+    public Permiso actualizarPermiso(Permiso permiso);
 
     // Read
     public List<Permiso> getAllPermisos();

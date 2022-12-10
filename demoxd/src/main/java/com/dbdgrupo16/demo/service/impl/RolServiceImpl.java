@@ -14,7 +14,12 @@ public class RolServiceImpl implements RolService {
     private RolRepository rolRepository;
 
     @Override
-    public Rol crearActualizarRol(Rol rol) {
+    public Rol crearRol(Rol rol) {
+        return rolRepository.save(rol);
+    }
+
+    @Override
+    public Rol actualizarRol(Rol rol) {
         return rolRepository.save(rol);
     }
 

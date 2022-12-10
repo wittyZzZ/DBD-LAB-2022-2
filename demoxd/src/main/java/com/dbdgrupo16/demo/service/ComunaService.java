@@ -1,11 +1,18 @@
 package com.dbdgrupo16.demo.service;
 
 import com.dbdgrupo16.demo.models.Comuna;
+import com.dbdgrupo16.demo.models.Region;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public interface ComunaService {
-    // Create/Update
-    public Comuna crearActualizarComuna(Comuna comuna);
+    // Create
+    public Comuna crearComuna(Comuna comuna);
+
+    // Update
+    public Comuna actualizarComuna(Comuna comuna);
 
     // Read
     public List<Comuna> getAllComunas();

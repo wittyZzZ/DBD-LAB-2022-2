@@ -4,29 +4,41 @@ import com.dbdgrupo16.demo.models.Comuna;
 import com.dbdgrupo16.demo.repository.ComunaRepository;
 import com.dbdgrupo16.demo.service.ComunaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class ComunaServicempl implements ComunaService {
+@Service
+public class ComunaServiceImpl implements ComunaService {
 
     @Autowired
     private ComunaRepository comunaRepository;
 
+    // Create
     @Override
-    public Comuna crearActualizarComuna(Comuna comuna) {
+    public Comuna crearComuna(Comuna comuna) {
         return comunaRepository.save(comuna);
     }
 
+    // Update
+    @Override
+    public Comuna actualizarComuna(Comuna comuna) {
+        return comunaRepository.save(comuna);
+    }
+
+    // Read
     @Override
     public List<Comuna> getAllComunas() {
         return (List<Comuna>) comunaRepository.findAll();
     }
 
+    // Read
     @Override
     public Comuna getComunaById(Integer id_comuna) {
         return comunaRepository.findById(id_comuna).orElse(null);
     }
 
+    // Delete
     @Override
     public Comuna eliminarComuna(Integer id_comuna) throws Exception {
         Comuna deletedComuna = null;
@@ -43,4 +55,5 @@ public class ComunaServicempl implements ComunaService {
         return deletedComuna;
     }
 }
+
 

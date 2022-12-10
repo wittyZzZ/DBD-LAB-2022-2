@@ -5,6 +5,7 @@ import com.dbdgrupo16.demo.repository.RegionRepository;
 import com.dbdgrupo16.demo.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -13,21 +14,31 @@ public class RegionServiceImpl implements RegionService {
     @Autowired
     private RegionRepository regionRepository;
 
+    // Create
     @Override
-    public Region crearActualizarRegion(Region region) {
+    public Region crearRegion(Region region) {
         return regionRepository.save(region);
     }
 
+    // Update
+    @Override
+    public Region actualizarRegion(Region region) {
+        return regionRepository.save(region);
+    }
+
+    // Read
     @Override
     public List<Region> getAllRegiones() {
         return (List<Region>) regionRepository.findAll();
     }
 
+    // Read
     @Override
     public Region getRegionById(Integer id_region) {
         return regionRepository.findById(id_region).orElse(null);
     }
 
+    // Delete
     @Override
     public Region eliminarRegion(Integer id_region) throws Exception {
         Region deletedRegion = null;
