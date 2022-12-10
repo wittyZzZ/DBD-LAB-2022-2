@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class DireccionServicempl implements DireccionService {
+public class DireccionServiceImpl implements DireccionService {
     @Autowired
     private DireccionRepository direccionRepository;
 

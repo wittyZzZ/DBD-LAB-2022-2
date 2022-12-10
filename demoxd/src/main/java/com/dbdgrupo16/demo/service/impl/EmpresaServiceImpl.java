@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class EmpresaServicempl implements EmpresaService {
+public class EmpresaServiceImpl implements EmpresaService {
     @Autowired
     private EmpresaRepository empresaRepository;
 
