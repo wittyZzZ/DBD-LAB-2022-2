@@ -2,7 +2,6 @@ package com.dbdgrupo16.demo.service;
 
 import com.dbdgrupo16.demo.models.Carro_de_compra;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 @Service
 public interface Carro_de_compraService {
