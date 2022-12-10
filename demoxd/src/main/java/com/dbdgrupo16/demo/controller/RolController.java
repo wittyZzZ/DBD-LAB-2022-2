@@ -1,5 +1,6 @@
 package com.dbdgrupo16.demo.controller;
 
+import com.dbdgrupo16.demo.models.Region;
 import com.dbdgrupo16.demo.models.Rol;
 import com.dbdgrupo16.demo.service.RolService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,47 +17,58 @@ public class RolController {
     @Autowired
     private RolService rolService;
 
-    @GetMapping("/allRoles")
+    @GetMapping
     public ResponseEntity<List<Rol>> getAllRoles() {
-        List<Rol> roles = null;
+        List<Rol> roli = null;
         try {
-            roles = rolService.getAllRoles();
+            roli = rolService.getAllRoles();
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<List<Rol>>(roles,HttpStatus.OK);
+        return new ResponseEntity<List<Rol>>(roli,HttpStatus.OK);
     }
 
-    @GetMapping("/getById/{id_rol}")
+    @GetMapping("{id_rol}")
     public ResponseEntity<Rol> getRolById(@PathVariable("id_rol") Integer id_rol) {
-        Rol roles = null;
+        Rol roli = null;
         try {
-            roles = rolService.getRolById(id_rol);
+            roli = rolService.getRolById(id_rol);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Rol>(roles,HttpStatus.OK);
+        return new ResponseEntity<Rol>(roli,HttpStatus.OK);
     }
 
-    @PostMapping("/crearoActualizar")
-    public ResponseEntity<Rol> crearActualizarRol(@RequestBody Rol rol){
-        Rol roles = null;
+    @PostMapping
+    public ResponseEntity<Rol> crearRol(@RequestBody Rol rol){
+        Rol roli = null;
         try {
-            roles = rolService.crearActualizarRol(rol);
+            roli = rolService.crearRol(rol);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Rol>(roles,HttpStatus.OK);
+        return new ResponseEntity<Rol>(roli,HttpStatus.OK);
     }
 
-    @DeleteMapping("/eliminar/{id_region}")
+    @PutMapping
+    public ResponseEntity<Rol> actualizarRol(@RequestBody Rol rol){
+        Rol roli = null;
+        try {
+            roli = rolService.actualizarRol(rol);
+        } catch(Exception ex) {
+            ex.getMessage();
+        }
+        return new ResponseEntity<Rol>(roli,HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id_region}")
     public ResponseEntity<Rol> eliminarRol(@PathVariable("id_rol") Integer id_rol){
-        Rol roles = null;
+        Rol roli = null;
         try {
-            roles = rolService.eliminarRol(id_rol);
+            roli = rolService.eliminarRol(id_rol);
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Rol>(roles,HttpStatus.OK);
+        return new ResponseEntity<Rol>(roli,HttpStatus.OK);
     }
 }

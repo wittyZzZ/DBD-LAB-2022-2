@@ -1,12 +1,18 @@
 package com.dbdgrupo16.demo.service;
 
 import com.dbdgrupo16.demo.models.Usuario;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public interface UsuarioService {
 
-    // Create /Update
-    public Usuario crearActualizarUsuario(Usuario usuario);
+    // Create
+    public Usuario crearUsuario(Usuario usuario);
+
+    // Update
+    public Usuario actualizarUsuario(Usuario usuario);
 
     // Read
     public List<Usuario> getAllUsuarios();

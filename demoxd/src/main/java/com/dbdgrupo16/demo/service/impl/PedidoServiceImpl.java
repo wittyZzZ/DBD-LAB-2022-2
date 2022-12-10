@@ -7,26 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
-public class PedidoServicempl implements PedidoService {
+public class PedidoServiceImpl implements PedidoService {
 
     @Autowired
     private PedidoRepository pedidoRepository;
 
     @Override
-    public Pedido crearActualizarPedido(Pedido pedido) {
-        return pedidoRepository.save(pedido);
-    }
-
+    public Pedido crearPedido(Pedido pedido) {return pedidoRepository.save(pedido);}
+    @Override
+    public Pedido actualizarPedido(Pedido pedido) {return pedidoRepository.save(pedido);}
     @Override
     public List<Pedido> getAllPedidos() {
         return (List<Pedido>) pedidoRepository.findAll();
     }
-
     @Override
     public Pedido getPedidoById(Integer id_pedido) {
         return pedidoRepository.findById(id_pedido).orElse(null);
     }
-
     @Override
     public Pedido eliminarPedido(Integer id_pedido) throws Exception {
         Pedido deletedPedido = null;

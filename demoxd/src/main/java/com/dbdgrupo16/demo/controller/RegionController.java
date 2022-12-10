@@ -16,47 +16,58 @@ public class RegionController {
     @Autowired
     private RegionService regionService;
 
-    @GetMapping("/allRegiones")
+    @GetMapping
     public ResponseEntity<List<Region>> getAllRegiones() {
-        List<Region> regiones = null;
+        List<Region> regi = null;
         try {
-            regiones = regionService.getAllRegiones();
+            regi = regionService.getAllRegiones();
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<List<Region>>(regiones,HttpStatus.OK);
+        return new ResponseEntity<List<Region>>(regi,HttpStatus.OK);
     }
 
-    @GetMapping("/getById/{id_region}")
+    @GetMapping("{id_region}")
     public ResponseEntity<Region> getRegionById(@PathVariable("id_region") Integer id_region) {
-        Region regiones = null;
+        Region regi = null;
         try {
-            regiones = regionService.getRegionById(id_region);
+            regi = regionService.getRegionById(id_region);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Region>(regiones,HttpStatus.OK);
+        return new ResponseEntity<Region>(regi,HttpStatus.OK);
     }
 
-    @PostMapping("/crearoActualizar")
-    public ResponseEntity<Region> crearActualizarRegion(@RequestBody Region region){
-        Region regiones = null;
+    @PostMapping
+    public ResponseEntity<Region> crearRegion(@RequestBody Region region){
+        Region regi = null;
         try {
-            regiones = regionService.crearActualizarRegion(region);
+            regi = regionService.crearRegion(region);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Region>(regiones,HttpStatus.OK);
+        return new ResponseEntity<Region>(regi,HttpStatus.OK);
     }
 
-    @DeleteMapping("/eliminar/{id_region}")
+    @PutMapping
+    public ResponseEntity<Region> actualizarRegion(@RequestBody Region region){
+        Region regi = null;
+        try {
+            regi = regionService.actualizarRegion(region);
+        } catch(Exception ex) {
+            ex.getMessage();
+        }
+        return new ResponseEntity<Region>(regi,HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id_region}")
     public ResponseEntity<Region> eliminarRegion(@PathVariable("id_region") Integer id_region){
-        Region regiones = null;
+        Region regi = null;
         try {
-            regiones = regionService.eliminarRegion(id_region);
+            regi = regionService.eliminarRegion(id_region);
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Region>(regiones,HttpStatus.OK);
+        return new ResponseEntity<Region>(regi,HttpStatus.OK);
     }
 }

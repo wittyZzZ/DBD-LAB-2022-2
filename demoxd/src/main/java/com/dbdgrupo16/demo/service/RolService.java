@@ -1,12 +1,18 @@
 package com.dbdgrupo16.demo.service;
 
 import com.dbdgrupo16.demo.models.Rol;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public interface RolService {
 
-    // Create/Update
-    public Rol crearActualizarRol(Rol rol);
+    // Create
+    public Rol crearRol(Rol rol);
+
+    // Update
+    public Rol actualizarRol(Rol rol);
 
     // Read
     public List<Rol> getAllRoles();

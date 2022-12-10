@@ -2,26 +2,26 @@
 
 Create table if not exists Region
 (
-	id_region int primary key,
+	id_region serial primary key,
 	nombre_region varchar(75)
 );
 
 create table if not exists Permiso
 (
-	id_permiso int primary key,
+	id_permiso serial primary key,
 	nombre_permiso varchar(75)
 );
 
 create table if not exists Pedido
 (
-	id_pedido int primary key,
+	id_pedido serial primary key,
 	direccion_entrega varchar(100),
-	fecha_entrega date
+	fecha_entrega varchar(100)
 );
 
 create table if not exists Producto
 (
-	id_producto int primary key,
+	id_producto serial primary key,
 	nombre_producto varchar(75),
 	tipo_producto varchar(50),
 	precio_producto int,
@@ -31,7 +31,7 @@ create table if not exists Producto
 
 create table if not exists Administrador_empresa
 (
-	id_admin_empresa int primary key,
+	id_admin_empresa serial primary key,
 	RUT_admin_empresa varchar(15),
 	nombre_admin_empresa varchar(75),
 	correo_admin_empresa varchar(75),
@@ -40,7 +40,7 @@ create table if not exists Administrador_empresa
 
 create table if not exists Empresa
 (
-	id_empresa int primary key,
+	id_empresa serial primary key,
 	nombre_empresa varchar(75),
 	tipo_tienda varchar(50),
 	correo_empresa varchar(75),
@@ -53,13 +53,13 @@ create table if not exists Empresa
 
 create table if not exists Usuario
 (
-	id_usuario int primary key,
+	id_usuario serial primary key,
 	RUT_usuario varchar(15) not null,
 	nombre_usuario varchar (75),
 	correo_usuario varchar(75),
 	telefono_usuario int,
 	edad_usuario int,
-	fecha_registro date,
+	fecha_registro varchar(75),
 	contraseña_cuenta varchar(30),
 	id_empresa int not null,
 	id_region int not null,
@@ -69,8 +69,8 @@ create table if not exists Usuario
 
 create table if not exists Usuario_producto
 (
-	id_usuario_producto int primary key,
-id_usuario int not null,
+	id_usuario_producto serial primary key,
+	id_usuario int not null,
 	id_producto int not null, 
 	puntaje_producto int,
 	Foreign key(id_usuario) references Usuario(id_usuario),
@@ -79,7 +79,7 @@ id_usuario int not null,
 
 create table if not exists Comuna 
 (
-	id_comuna int primary key,
+	id_comuna serial primary key,
 	nombre_comuna varchar(75),
 	codigo_postal int,
 	id_region int not null,
@@ -88,7 +88,7 @@ create table if not exists Comuna
 
 create table if not exists Carro_de_compra
 (
-	id_carro int primary key,
+	id_carro serial primary key,
 	medio_de_pago varchar(50),
 	cantidad_productos int,
 	precio_total int,
@@ -98,16 +98,16 @@ create table if not exists Carro_de_compra
 
 create table if not exists Usuario_carro_compra
 (
-Id_usuario_carro_compra int primary key,	
-id_carro int not null,
+	id_usuario_carro_compra serial primary key,	
+	id_carro int not null,
 	id_usuario int not null,
-foreign key(id_carro) references Carro_de_compra(id_carro),
+	foreign key(id_carro) references Carro_de_compra(id_carro),
 	foreign key(id_usuario) references Usuario(id_usuario)
 );	
 
 create table if not exists Producto_carro_compra
 (
-	id_producto_carro_compra int primary key,
+	id_producto_carro_compra serial primary key,
 	id_producto int not null,
 	id_carro int not null,
 	foreign key(ID_producto) references Producto(ID_producto),
@@ -116,14 +116,14 @@ create table if not exists Producto_carro_compra
 
 create table if not exists Rol
 (
-	id_rol int primary key,
+	id_rol serial primary key,
 	nombre_rol varchar(75)
 );
 
 
 create table if not exists Rol_usuario
 (
-	id_rol_usuario int primary key,
+	id_rol_usuario serial primary key,
 	id_rol int not null,
 	id_usuario int not null,
 	foreign key(id_rol) references Rol(id_rol),
@@ -134,7 +134,7 @@ create table if not exists Rol_usuario
 
 create table if not exists Rol_permiso
 (
-	id_rol_permiso int primary key,
+	id_rol_permiso serial primary key,
 	id_rol int not null,
 	id_permiso int not null,
 	foreign key(ID_rol) references Rol(id_rol),
@@ -143,7 +143,7 @@ create table if not exists Rol_permiso
 
 create table if not exists Direccion
 (
-	id_Direccion int primary key,
+	id_Direccion serial primary key,
 	calle varchar(75),
 	numero int,
 	id_comuna int not null,
@@ -152,7 +152,7 @@ create table if not exists Direccion
 
 create table if not exists Usuario_empresa
 (	
-	id_usuario_empresa int primary key,
+	id_usuario_empresa serial primary key,
 	id_empresa int not null, 
 	id_usuario int not null,
 	puntaje_empresa int,

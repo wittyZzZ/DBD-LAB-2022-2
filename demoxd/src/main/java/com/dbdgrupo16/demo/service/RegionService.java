@@ -1,12 +1,18 @@
 package com.dbdgrupo16.demo.service;
 
 import com.dbdgrupo16.demo.models.Region;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public interface RegionService {
 
-    // Create/Update
-    public Region crearActualizarRegion(Region region);
+    // Create
+    public Region crearRegion(Region region);
+
+    // Update
+    public Region actualizarRegion(Region region);
 
     // Read
     public List<Region> getAllRegiones();

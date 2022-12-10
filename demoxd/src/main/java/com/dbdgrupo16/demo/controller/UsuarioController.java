@@ -1,5 +1,6 @@
 package com.dbdgrupo16.demo.controller;
 
+import com.dbdgrupo16.demo.models.Region;
 import com.dbdgrupo16.demo.models.Usuario;
 import com.dbdgrupo16.demo.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,47 +17,58 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping("/allUsuarios")
+    @GetMapping
     public ResponseEntity<List<Usuario>> getAllUsuarios() {
-        List<Usuario> usuarios = null;
+        List<Usuario> user = null;
         try {
-            usuarios = usuarioService.getAllUsuarios();
+            user = usuarioService.getAllUsuarios();
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<List<Usuario>>(usuarios,HttpStatus.OK);
+        return new ResponseEntity<List<Usuario>>(user,HttpStatus.OK);
     }
 
-    @GetMapping("/getById/{id_usuario}")
+    @GetMapping("{id_usuario}")
     public ResponseEntity<Usuario> getUsuarioById(@PathVariable("id_usuario") Integer id_usuario) {
-        Usuario usuarios = null;
+        Usuario user = null;
         try {
-            usuarios = usuarioService.getUsuarioById(id_usuario);
+            user = usuarioService.getUsuarioById(id_usuario);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Usuario>(usuarios,HttpStatus.OK);
+        return new ResponseEntity<Usuario>(user,HttpStatus.OK);
     }
 
-    @PostMapping("/crearoActualizar")
-    public ResponseEntity<Usuario> crearActualizarUsuario(@RequestBody Usuario usuario){
-        Usuario usuarios = null;
+    @PostMapping
+    public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario){
+        Usuario user = null;
         try {
-            usuarios = usuarioService.crearActualizarUsuario(usuario);
+            user = usuarioService.crearUsuario(usuario);
         } catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Usuario>(usuarios,HttpStatus.OK);
+        return new ResponseEntity<Usuario>(user,HttpStatus.OK);
     }
 
-    @DeleteMapping("/eliminar/{id_usuario}")
+    @PutMapping
+    public ResponseEntity<Usuario> actualizarUsuario(@RequestBody Usuario usuario){
+        Usuario user = null;
+        try {
+            user = usuarioService.actualizarUsuario(usuario);
+        } catch(Exception ex) {
+            ex.getMessage();
+        }
+        return new ResponseEntity<Usuario>(user,HttpStatus.OK);
+    }
+
+    @DeleteMapping("{id_usuario}")
     public ResponseEntity<Usuario> eliminarUsuario(@PathVariable("id_usuario") Integer id_usuario){
-        Usuario usuarios = null;
+        Usuario user = null;
         try {
-            usuarios = usuarioService.eliminarUsuario(id_usuario);
+            user = usuarioService.eliminarUsuario(id_usuario);
         }catch(Exception ex) {
             ex.getMessage();
         }
-        return new ResponseEntity<Usuario>(usuarios,HttpStatus.OK);
+        return new ResponseEntity<Usuario>(user,HttpStatus.OK);
     }
 }
