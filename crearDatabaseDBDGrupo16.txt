@@ -16,7 +16,7 @@ create table if not exists Pedido
 (
 	id_pedido serial primary key,
 	direccion_entrega varchar(100),
-	fecha_entrega date
+	fecha_entrega varchar(100)
 );
 
 create table if not exists Producto
@@ -59,7 +59,7 @@ create table if not exists Usuario
 	correo_usuario varchar(75),
 	telefono_usuario int,
 	edad_usuario int,
-	fecha_registro date,
+	fecha_registro varchar(75),
 	contraseña_cuenta varchar(30),
 	id_empresa int not null,
 	id_region int not null,

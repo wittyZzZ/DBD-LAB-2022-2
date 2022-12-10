@@ -11,7 +11,7 @@ public class Usuario {
     @Column(name = "id_usuario")
     private Integer id_usuario;
     @Column(name = "rut_usuario")
-    private Integer rut_usuario;
+    private String rut_usuario;
     @Column(name = "nombre_usuario")
     private String nombre_usuario;
     @Column(name = "correo_usuario")
@@ -24,19 +24,17 @@ public class Usuario {
     private String fecha_registro;
     @Column(name = "contraseña_cuenta")
     private String contraseña_cuenta;
-    @ManyToOne
-    @JoinColumn(name = "id_empresa")
-    Empresa empresa;
-    @ManyToOne
-    @JoinColumn(name = "id_region")
-    Region region;
+    @Column(name = "id_empresa")
+    private Integer id_empresa;
+    @Column(name = "id_region")
+    private Integer id_region;
 
     public Usuario() {
 
     }
 
     //Constructor
-    public Usuario(Integer id_usuario, Integer rut_usuario, String nombre_usuario, String correo_usuario, Integer telefono_usuario, Integer edad_usuario, String fecha_registro, String contraseña_cuenta, Empresa empresa, Region region) {
+    public Usuario(Integer id_usuario, String rut_usuario, String nombre_usuario, String correo_usuario, Integer telefono_usuario, Integer edad_usuario, String fecha_registro, String contraseña_cuenta, Empresa empresa, Region region) {
 
         this.id_usuario = id_usuario;
         this.rut_usuario = rut_usuario;
@@ -46,15 +44,15 @@ public class Usuario {
         this.edad_usuario = edad_usuario;
         this.fecha_registro = fecha_registro;
         this.contraseña_cuenta = contraseña_cuenta;
-        this.empresa = empresa;
-        this.region = region;
+        this.id_empresa = id_empresa;
+        this.id_region = id_region;
     }
 
     //Getters
     public Integer getId_usuario() {
         return id_usuario;
     }
-    public Integer getRut_usuario() {
+    public String getRut_usuario() {
         return rut_usuario;
     }
     public String getNombre_usuario() {
@@ -75,18 +73,18 @@ public class Usuario {
     public String getContraseña_cuenta() {
         return contraseña_cuenta;
     }
-    public Empresa getEmpresa() {
-        return empresa;
+    public Integer getId_empresa() {
+        return id_empresa;
     }
-    public Region getRegion() {
-        return region;
+    public Integer getId_region() {
+        return id_region;
     }
 
     //Setters
     public void setId_usuario(Integer id_usuario) {
         this.id_usuario = id_usuario;
     }
-    public void setRut_usuario(Integer rut_usuario) {
+    public void setRut_usuario(String rut_usuario) {
         this.rut_usuario = rut_usuario;
     }
     public void setNombre_usuario(String nombre_usuario) {
@@ -107,11 +105,11 @@ public class Usuario {
     public void setContraseña_cuenta(String contraseña_cuenta) {
         this.contraseña_cuenta = contraseña_cuenta;
     }
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
+    public void setId_empresa(Integer id_empresa) {
+        this.id_empresa = id_empresa;
     }
-    public void setRegion(Region region) {
-        this.region = region;
+    public void setId_region(Integer id_region) {
+        this.id_region = id_region;
     }
 
     @Override
@@ -124,8 +122,8 @@ public class Usuario {
                 ", edad_usuario=" + edad_usuario +
                 ", fecha_registro='" + fecha_registro +
                 ", contraseña_cuenta='" + contraseña_cuenta +
-                ", empresa=" + empresa +
-                ", region=" + region +
+                ", id_empresa=" + id_empresa +
+                ", id_region=" + id_region +
                 ']';
     }
 }
