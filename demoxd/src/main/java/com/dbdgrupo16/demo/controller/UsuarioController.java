@@ -28,10 +28,10 @@ public class UsuarioController {
     }
 
     @GetMapping("/getById/{id_usuario}")
-    public ResponseEntity<Usuario> getUsuarioById(@PathVariable("id_usuario") Integer id_region) {
+    public ResponseEntity<Usuario> getUsuarioById(@PathVariable("id_usuario") Integer id_usuario) {
         Usuario usuarios = null;
         try {
-            usuarios = usuarioService.getUsuarioById(id_region);
+            usuarios = usuarioService.getUsuarioById(id_usuario);
         } catch(Exception ex) {
             ex.getMessage();
         }
@@ -39,7 +39,7 @@ public class UsuarioController {
     }
 
     @PostMapping("/crearoActualizar")
-    public ResponseEntity<Usuario> crearActualizarRegion(@RequestBody Usuario usuario){
+    public ResponseEntity<Usuario> crearActualizarUsuario(@RequestBody Usuario usuario){
         Usuario usuarios = null;
         try {
             usuarios = usuarioService.crearActualizarUsuario(usuario);
