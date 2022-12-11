@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Roles_permiso")
+@RequestMapping("/rol_permiso")
 public class Rol_permisoController {
 
     @Autowired

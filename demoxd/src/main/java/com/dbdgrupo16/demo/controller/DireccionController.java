@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/direcciones")
+@RequestMapping("/direccion")
 public class DireccionController {
     @Autowired
     private DireccionService direccionService;

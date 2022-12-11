@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
-@RequestMapping("/usuarios_carro_compra")
+@RequestMapping("/usuario_carro_compra")
 public class Usuario_carro_compraController {
     @Autowired
     private Usuario_carro_compraService usuario_carro_compraService;
