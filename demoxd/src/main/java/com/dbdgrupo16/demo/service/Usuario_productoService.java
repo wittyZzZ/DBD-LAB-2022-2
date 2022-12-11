@@ -1,7 +1,6 @@
 package com.dbdgrupo16.demo.service;
 
 
-import com.dbdgrupo16.demo.models.Usuario;
 import com.dbdgrupo16.demo.models.Usuario_producto;
 import org.springframework.stereotype.Service;
 

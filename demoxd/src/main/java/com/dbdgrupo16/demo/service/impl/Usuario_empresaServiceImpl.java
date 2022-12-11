@@ -4,9 +4,11 @@ import com.dbdgrupo16.demo.models.Usuario_empresa;
 import com.dbdgrupo16.demo.repository.Usuario_empresaRepository;
 import com.dbdgrupo16.demo.service.Usuario_empresaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class Usuario_empresaServiceImpl implements Usuario_empresaService {
 
 

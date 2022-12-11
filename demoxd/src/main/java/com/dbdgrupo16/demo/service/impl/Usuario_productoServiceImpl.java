@@ -5,9 +5,11 @@ import com.dbdgrupo16.demo.models.Usuario_producto;
 import com.dbdgrupo16.demo.repository.Usuario_productoRepository;
 import com.dbdgrupo16.demo.service.Usuario_productoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class Usuario_productoServiceImpl implements Usuario_productoService {
 
 
