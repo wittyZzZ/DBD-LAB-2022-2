@@ -8,7 +8,7 @@ import java.util.List;
 @Service
 public interface Usuario_empresaService {
 
-    // Create
+    // Create a
     public Usuario_empresa crearUsuario_empresa(Usuario_empresa usuario_empresa);
 
     // Update
