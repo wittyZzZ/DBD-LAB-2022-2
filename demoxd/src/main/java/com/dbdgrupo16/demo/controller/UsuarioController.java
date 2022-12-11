@@ -1,6 +1,5 @@
 package com.dbdgrupo16.demo.controller;
 
-import com.dbdgrupo16.demo.models.Region;
 import com.dbdgrupo16.demo.models.Usuario;
 import com.dbdgrupo16.demo.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
