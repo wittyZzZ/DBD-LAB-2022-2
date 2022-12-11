@@ -1,4 +1,6 @@
+Create database DBDGrupo16
 
+Use DBDGrupo16
 
 Create table if not exists Region
 (

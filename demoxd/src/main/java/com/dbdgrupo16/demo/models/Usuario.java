@@ -1,5 +1,7 @@
 package com.dbdgrupo16.demo.models;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 
 @Entity
